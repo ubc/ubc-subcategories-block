@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ubc/subcategory-block",
+	"version": "1.0.0",
+	"title": "Subcategories",
+	"category": "theme",
+	"icon": "category",
+	"description": "",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "ubc-subcategory-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"taxonomySlug": {
+			"type": "string",
+			"default": "category"
+		},
+		"selectedTermId": {
+			"type": "integer"
+		},
+		"hideEmpty": {
+			"type": "boolean",
+			"default": false
+		},
+		"isLink": {
+			"type": "boolean",
+			"default": false
+		},
+		"tag": {
+			"type": "string",
+			"default": "p"
+		}
+	},
+	"usesContext": [ "postId", "postType" ]
+}

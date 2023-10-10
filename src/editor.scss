@@ -1,0 +1,18 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.ubc-subcategory-panel-category .components-base-control {
+    margin-bottom: 0 !important
+}
+
+.ubc-subcategory-panel-category .editor-post-taxonomies__hierarchical-terms-list {
+    max-height: 32em;
+}
+
+// Disable links in the editor
+.wp-block-ubc-subcategory-block a{
+    pointer-events: none;
+}

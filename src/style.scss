@@ -1,0 +1,55 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-ubc-profiles-search-block {
+	
+	button, input[type=submit] {
+		background: #002145;
+		border: 1px solid #191938;
+		border-radius: 0;
+		color: #fff;
+		padding: 4px 12px;
+		font-size: 14px;
+		line-height: 20px;
+
+		&:hover {
+			background-color: #2f5d7c!important;
+			border-color: #2f5d7c;
+			color: #fff;
+		}
+	}
+
+	input[type=search] {
+		min-width: 200px;
+		margin-right: 1rem;
+	}
+}
+
+.visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0,0,0,0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+#profile-search-form{
+	display: flex;
+	align-items: center;
+
+	> *{
+		margin-bottom: 0;
+	}
+
+	> input[type=search] {
+		margin-right: 1rem;
+	}
+}
