@@ -102,7 +102,7 @@ function render_subcategories( $attributes, $content, $block ) {
 		$terms
 	);
 
-	return wp_kses_post( '<' . $tag . ' class="' . $attributes['className'] . '">' . join( ', ', $terms ) . '</' . $tag . '>' );
+	return wp_kses_post( '<' . $tag . ( isset( $attributes['className'] ) ? ' class="' . $attributes['className'] . '"' : '' ) . '>' . join( ', ', $terms ) . '</' . $tag . '>' );
 }//end render_subcategories()
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------- */
