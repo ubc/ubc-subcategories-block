@@ -66,8 +66,8 @@ export default function Edit( props ) {
 			{ ! isResolving && categories && categories.length > 0 ? (
 				<Tag { ...blockProps }>
 					{ categories.map((cat, index) => {
-						return isLink ? <a key={index} href={cat.link}>{unescape( cat.name ).trim()}</a> : <span key={index}>{unescape( cat.name ).trim()}</span>
-					}).reduce((prev, curr) => [prev, ', ', curr])
+						return isLink ? <a key={index} href={cat.link} className='single-term'>{unescape( cat.name ).trim()}</a> : <span key={index} className='single-term'>{unescape( cat.name ).trim()}</span>
+					}).reduce((prev, curr) => [prev, <span className='term-separator'>, </span>, curr])
 					}
 				</Tag>
 			) : null}

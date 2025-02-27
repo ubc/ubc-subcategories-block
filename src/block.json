@@ -33,7 +33,7 @@
 		},
 		"tag": {
 			"type": "string",
-			"default": "p"
+			"default": "div"
 		}
 	},
 	"usesContext": [ "postId", "postType" ]

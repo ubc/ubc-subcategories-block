@@ -97,12 +97,12 @@ function render_subcategories( $attributes, $content, $block ) {
 
 	$terms = array_map(
 		function( $term ) use ( $is_link ) {
-			return $is_link ? '<a href="' . esc_url( get_term_link( $term->term_id ) ) . '">' . esc_attr( $term->name ) . '</a>' : '<span>' . esc_attr( $term->name ) . '</span>';
+			return $is_link ? '<a class="single-term" href="' . esc_url( get_term_link( $term->term_id ) ) . '">' . esc_attr( $term->name ) . '</a>' : '<span class="single-term">' . esc_attr( $term->name ) . '</span>';
 		},
 		$terms
 	);
 
-	return wp_kses_post( '<' . $tag . ( isset( $attributes['className'] ) ? ' class="' . $attributes['className'] . '"' : '' ) . '>' . join( ', ', $terms ) . '</' . $tag . '>' );
+	return wp_kses_post( '<' . $tag . ( isset( $attributes['className'] ) ? ' class="wp-block-ubc-subcategory ' . $attributes['className'] . '"' : ' class="wp-block-ubc-subcategory"' ) . '>' . join( '<span class="term-separator">, </span>', $terms ) . '</' . $tag . '>' );
 }//end render_subcategories()
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------- */
